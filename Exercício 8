@@ -1,0 +1,37 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio_8 {
+
+    public static void preencheVetor (int [] vetor, Scanner s) {
+        for(int i = 0; i < vetor.length; i++) {
+            System.out.println("Informe o vetor " + (i + 1));
+            vetor[i] = s.nextInt ();
+        }
+    }
+
+    public static void imprimeVetor (int [] vetor) {
+        for(int i = 0; i < vetor.length; i++) {
+            System.out.print(vetor[i] + " ");
+        }
+    }
+    public static void somar (int [] vetor, Scanner s) {
+        int soma = 0;
+        for(int i = 0; i < vetor.length; i++) {
+            soma += vetor[i];
+        }
+        System.out.println("\nA soma dos vetores é: " + soma);
+    }
+    public static void main (String [] agrs) {
+        Scanner s = new Scanner(System.in);
+        int [] lista1 = new int [10];
+        
+
+        preencheVetor(lista1, s);
+        imprimeVetor(lista1);
+        somar(lista1, s);
+
+        s.close();
+    }
+}
