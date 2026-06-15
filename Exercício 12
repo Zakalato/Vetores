@@ -1,0 +1,38 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio_12 {
+    public static void preencheVetor (int [] vetor, Scanner s) {
+        int posicoes = 0;
+        for(int i = 0; i < vetor.length; i++) {
+            
+            System.out.println("Informe o vetor " + (i + 1));
+            vetor[i] = s.nextInt();
+            if (vetor[i] != 0) {
+                vetor [posicoes] = vetor [i];
+                posicoes++;
+            }
+        }
+        for (int i = posicoes; i < vetor.length; i++) {
+            vetor[i] = 0;
+        }
+    }
+
+    public static void imprimeVetor (int [] vetor) {
+        for(int i = 0; i <vetor.length ; i++) {
+            System.out.print(vetor[i] + " ");
+        }
+
+    }
+    public static void main (String [] agrs) {
+        Scanner s = new Scanner(System.in);
+        int [] lista1 = new int [10];
+        
+
+        preencheVetor(lista1, s);
+        imprimeVetor(lista1);
+
+        s.close();
+    }
+}
